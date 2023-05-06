@@ -38,15 +38,16 @@ CF_PATH = f"{SPACE * 13}Conf File Path: "
 
 CF_PATH_KEY = "confFilePath"
 
-CF_PATH_PROMPT = f"\n\nPlease copy-paste your .conf file at ({Fore.LIGHTCYAN_EX}{{}}{Style.RESET_ALL})\nAfter copying, Press any key to continue..."
+#CF_PATH_PROMPT = f"\n\nPlease copy-paste your .conf file at ({Fore.LIGHTCYAN_EX}{{}}{Style.RESET_ALL})\nAfter copying, Press any key to continue..."
 
 CONF_EXTENSION = ".conf"
 
-FILE_NOT_EXISTS = f"{Fore.RED}File does not exist{Style.RESET_ALL}"
+NOT_EXISTS = f"{Fore.RED}Does not exist{Style.RESET_ALL}"
 
 STATUS_ERROR = f"{Fore.YELLOW}Status Variables contain Errors, please fix them before proceeding...{Style.RESET_ALL}"
 
 MAIN_MENU = (f"{Fore.LIGHTCYAN_EX}[E] | Edit Global Configurations\n"
+             f"[C] | Compatibility Mode\n"
              f"[R] | Refresh\n"
              f"[0] | Exit{Style.RESET_ALL}\n\n"
              f"{Fore.YELLOW}Profile Commands{Style.RESET_ALL}\n"
@@ -78,3 +79,15 @@ CREATE = "Creating "
 CREATE_DIR = f"{CREATE}Directory {{}}"
 
 CREATE_FILE = f"{CREATE}File {{}}"
+
+TRUE_VALUES = ("y", "")
+
+WINDOWS = f"{Fore.CYAN}Windows{Style.RESET_ALL}"
+
+LINUX = f"{Fore.CYAN}Linux{Style.RESET_ALL}"
+
+MACOS = f"{Fore.CYAN}MacOS{Style.RESET_ALL}"
+
+SHELLS = {'bash':'Bash', 'fish':'Fish', 'ksh':'Korn', 'zsh':'Zsh', 'csh':'Csh', 'dash':'Dash', 'pwsh':'Powershell', 'elvish':'Elvish'}
+
+CF_PATH_PROMPT = ("Select a Rclone conf file :- ", f"No conf files were found, copy-paste your conf file to {{}} and press R to refresh, press any other key to skip...", "skipping update", f"Conf files were found, Select your desired file, You can copy-paste your file to {{}} and press R to refresh, your new conf will be visible", "No selection was made, skipping update")
